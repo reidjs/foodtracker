@@ -28,9 +28,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         mealNameLabel.text = textField.text
     }
     //MARK: UIImagePickerControllerDelegate
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         //dismiss picker if user cancelled
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         //info dictionary may contain multiple representations of the image. You want original
@@ -39,22 +39,22 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         }
         //set photoimageview to display the image
         photoImageView.image = selectedImage
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     //MARK: Actions
-    @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
+    @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
         //Hide the keyboard
         nameTextField.resignFirstResponder()
         //UIImagePickerController is a view controller that lets user pick media from photo library
         let imagePickerController = UIImagePickerController()
         //only allow photos to be picked, not taken
-        imagePickerController.sourceType = .PhotoLibrary //should the p in photo be lowercase?
+        imagePickerController.sourceType = .photoLibrary 
         //make sure viewcontroller is notified when user picks image
         imagePickerController.delegate = self
-        presentViewController(imagePickerController, animated: true, completion: nil)
+        present(imagePickerController, animated: true, completion: nil)
         
     }
-    @IBAction func setDefaultLabelText(sender: UIButton) {
+    @IBAction func setDefaultLabelText(_ sender: UIButton) {
         mealNameLabel.text = "Default Text"
     }
 }
