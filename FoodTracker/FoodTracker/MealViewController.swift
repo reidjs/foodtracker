@@ -63,7 +63,16 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     }
     //MARK: Navigation
     @IBAction func cancel(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        let isPresentingInAddMealMode = presentingViewController is UINavigationController
+        if isPresentingInAddMealMode {
+            dismiss(animated: true, completion: nil)
+        }
+        else if let owningNavigationController = navigationController{
+            owningNavigationController.popViewController(animated: true)
+        }
+        else {
+            fatalError("MealViewController is not inside a nav controller")
+        }
     }
     // This method lets you configure a view controller before it's presented.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
