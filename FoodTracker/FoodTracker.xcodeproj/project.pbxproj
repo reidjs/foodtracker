@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		343090041F306ABE0002A458 /* RunTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343090031F306ABE0002A458 /* RunTableViewCell.swift */; };
 		343090061F306D920002A458 /* RunTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343090051F306D920002A458 /* RunTableViewController.swift */; };
+		343090081F3079A80002A458 /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343090071F3079A80002A458 /* RunViewController.swift */; };
 		343347F21F292E47008148A6 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343347F11F292E47008148A6 /* Meal.swift */; };
 		343347F41F29362A008148A6 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343347F31F29362A008148A6 /* MealTableViewCell.swift */; };
 		343347F61F294B51008148A6 /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343347F51F294B51008148A6 /* MealTableViewController.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		343090031F306ABE0002A458 /* RunTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunTableViewCell.swift; sourceTree = "<group>"; };
 		343090051F306D920002A458 /* RunTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunTableViewController.swift; sourceTree = "<group>"; };
+		343090071F3079A80002A458 /* RunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunViewController.swift; sourceTree = "<group>"; };
 		343347F11F292E47008148A6 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Meal.swift; path = ../Meal.swift; sourceTree = "<group>"; };
 		343347F31F29362A008148A6 /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		343347F51F294B51008148A6 /* MealTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				343347F51F294B51008148A6 /* MealTableViewController.swift */,
 				343090051F306D920002A458 /* RunTableViewController.swift */,
 				34A26C311F22407A00B74DF0 /* MealViewController.swift */,
+				343090071F3079A80002A458 /* RunViewController.swift */,
 				343347F31F29362A008148A6 /* MealTableViewCell.swift */,
 				343347F11F292E47008148A6 /* Meal.swift */,
 				343090031F306ABE0002A458 /* RunTableViewCell.swift */,
@@ -224,6 +227,7 @@
 				343347F21F292E47008148A6 /* Meal.swift in Sources */,
 				343090041F306ABE0002A458 /* RunTableViewCell.swift in Sources */,
 				34A26C321F22407A00B74DF0 /* MealViewController.swift in Sources */,
+				343090081F3079A80002A458 /* RunViewController.swift in Sources */,
 				343EEA7F1F27916200BD2603 /* RatingControl.swift in Sources */,
 				34A26C301F22407A00B74DF0 /* AppDelegate.swift in Sources */,
 				343347F61F294B51008148A6 /* MealTableViewController.swift in Sources */,

@@ -253,8 +253,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Your Runs" id="gxN-5B-wic">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="bt6-8d-qji"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="FQm-sT-GA8"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="FQm-sT-GA8"/>
                     </navigationItem>
                     <connections>
                         <segue destination="iSj-gt-oNs" kind="show" id="jx5-ES-mgm"/>
@@ -267,7 +266,7 @@
         <!--New Run-->
         <scene sceneID="E0e-nY-ju5">
             <objects>
-                <viewController id="iSj-gt-oNs" sceneMemberID="viewController">
+                <viewController id="iSj-gt-oNs" customClass="RunViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xag-B4-BrD"/>
                         <viewControllerLayoutGuide type="bottom" id="XAX-83-J9U"/>
@@ -275,13 +274,56 @@
                     <view key="view" contentMode="scaleToFill" id="rUL-t5-92b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1li-8O-xKj">
+                                <rect key="frame" x="124" y="93" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="day" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dSI-Fp-eRy">
+                                <rect key="frame" x="124" y="155" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="time" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RhX-QL-QTQ">
+                                <rect key="frame" x="238" y="155" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="location" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="smD-j6-Ryu">
+                                <rect key="frame" x="124" y="250" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Run" id="Glk-fp-0xD"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="New Run" id="Glk-fp-0xD">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="nUg-3y-qhQ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="weZ-vz-Ell"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="dayTextField" destination="dSI-Fp-eRy" id="dnD-JV-rWa"/>
+                        <outlet property="locationTextField" destination="smD-j6-Ryu" id="QEQ-2O-AwP"/>
+                        <outlet property="nameField" destination="1li-8O-xKj" id="gh1-v6-yVM"/>
+                        <outlet property="nameTextField" destination="1li-8O-xKj" id="pBH-Mr-FuU"/>
+                        <outlet property="saveButton" destination="weZ-vz-Ell" id="CMI-He-zX7"/>
+                        <outlet property="timeTextField" destination="RhX-QL-QTQ" id="E7z-ul-bUr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kwN-SY-8D2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3977" y="-346"/>
+            <point key="canvasLocation" x="3976.8000000000002" y="-346.77661169415296"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lWy-Tc-jjF">
