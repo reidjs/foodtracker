@@ -15,7 +15,7 @@ class RunViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     @IBOutlet weak var dayTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var saveButton: UIBarButtonItem!
-    var run: Run?
+    var run: Run?
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.delegate = self

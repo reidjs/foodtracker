@@ -35,6 +35,10 @@ class Run: NSObject, NSCoding{
         guard !location.isEmpty else {
             return nil
         }
+        self.name = name
+        self.day = day
+        self.time = time
+        self.location = location 
     }
     struct PropertyKey {
         static let name = "name"
@@ -59,10 +63,12 @@ class Run: NSObject, NSCoding{
         // Because photo is an optional property of Meal, just use conditional cast.
         
         let day = aDecoder.decodeObject(forKey: PropertyKey.day) as? String
-        let time = aDecoder.decodeInteger(forKey: PropertyKey.time) as? String
-        let location = aDecoder.decodeInteger(forKey: PropertyKey.location) as? String
+        let time = aDecoder.decodeObject(forKey: PropertyKey.time) as? String
+        let location = aDecoder.decodeObject(forKey: PropertyKey.location) as? String
         // Must call designated initializer.
-        self.init(name: name, day: day, time: time, location: location)
+        //self.init(name: name, day: day, time: time, location: location)
+        self.init(name: "a", day: "b", time: "c", location: "d")
+
     }
 }
 
