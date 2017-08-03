@@ -202,7 +202,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Cas-Us-hJa" customClass="RunTableViewCell" customModule="FoodTracker" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RunTableViewCell" id="Cas-Us-hJa" customClass="RunTableViewCell" customModule="FoodTracker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cas-Us-hJa" id="BLo-rZ-k0L">
@@ -311,7 +311,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="New Run" id="Glk-fp-0xD">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="nUg-3y-qhQ"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="weZ-vz-Ell"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="weZ-vz-Ell">
+                            <connections>
+                                <segue destination="nrR-fl-f9e" kind="unwind" unwindAction="unwindToRunListWithSender:" id="DSP-tq-Bxp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -323,6 +327,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kwN-SY-8D2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="nrR-fl-f9e" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4226" y="-326"/>
         </scene>
