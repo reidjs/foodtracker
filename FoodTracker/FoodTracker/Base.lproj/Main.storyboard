@@ -310,7 +310,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="New Run" id="Glk-fp-0xD">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="nUg-3y-qhQ"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="nUg-3y-qhQ">
+                            <connections>
+                                <action selector="cancel:" destination="iSj-gt-oNs" id="XdV-yj-ZLf"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="weZ-vz-Ell">
                             <connections>
                                 <segue destination="nrR-fl-f9e" kind="unwind" unwindAction="unwindToRunListWithSender:" id="DSP-tq-Bxp"/>

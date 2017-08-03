@@ -50,9 +50,8 @@ class RunViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
         updateSaveButtonState()
         navigationItem.title = textField.text
     }
-    
     // MARK: - Navigation
-    @IBAction func cancel(_ sender: Any) {
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
         let isPresentingInAddRunMode = presentingViewController is UINavigationController
         if isPresentingInAddRunMode {
             dismiss(animated: true, completion: nil)
