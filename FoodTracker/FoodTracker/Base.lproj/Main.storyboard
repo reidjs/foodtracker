@@ -81,7 +81,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="M3P-GW-njJ">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="M3P-GW-njJ">
                                 <rect key="frame" x="20" y="94" width="343" height="206"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Meal Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zda-eI-hfu">
@@ -100,7 +100,7 @@
                                             <outletCollection property="gestureRecognizers" destination="z40-Tr-AKc" appends="YES" id="7Nz-jI-XlS"/>
                                         </connections>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wh8-E6-4ht" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wh8-E6-4ht" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
                                         <rect key="frame" x="55.5" y="146" width="232" height="60"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="size" keyPath="starSize">
@@ -244,6 +244,7 @@
                                     <outlet property="locationLabel" destination="452-6Z-iHE" id="dlk-R9-BJm"/>
                                     <outlet property="nameLabel" destination="Kqu-QF-laa" id="uon-xi-Ik6"/>
                                     <outlet property="timeLabel" destination="Yld-fE-fLt" id="g5b-Lg-bPm"/>
+                                    <segue destination="iSj-gt-oNs" kind="show" identifier="ShowDetail" id="y6v-b2-knj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -253,11 +254,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Your Runs" id="gxN-5B-wic">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="FQm-sT-GA8"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="FQm-sT-GA8">
+                            <connections>
+                                <segue destination="aEg-wj-dn8" kind="presentation" identifier="AddItem" id="XNq-7K-Pqd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="iSj-gt-oNs" kind="show" id="jx5-ES-mgm"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jk7-wJ-BXV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -315,7 +317,6 @@
                     <connections>
                         <outlet property="dayTextField" destination="dSI-Fp-eRy" id="dnD-JV-rWa"/>
                         <outlet property="locationTextField" destination="smD-j6-Ryu" id="QEQ-2O-AwP"/>
-                        <outlet property="nameField" destination="1li-8O-xKj" id="gh1-v6-yVM"/>
                         <outlet property="nameTextField" destination="1li-8O-xKj" id="pBH-Mr-FuU"/>
                         <outlet property="saveButton" destination="weZ-vz-Ell" id="CMI-He-zX7"/>
                         <outlet property="timeTextField" destination="RhX-QL-QTQ" id="E7z-ul-bUr"/>
@@ -323,7 +324,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kwN-SY-8D2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3976.8000000000002" y="-346.77661169415296"/>
+            <point key="canvasLocation" x="4226" y="-326"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lWy-Tc-jjF">
@@ -344,22 +345,22 @@
             <point key="canvasLocation" x="1378.4000000000001" y="-371.06446776611699"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="CGs-HG-POZ">
+        <scene sceneID="tgb-af-xkT">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l7p-lf-gGd" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aEg-wj-dn8" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3jv-Ch-6KS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5ZT-i2-4qS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="iSj-gt-oNs" kind="relationship" relationship="rootViewController" id="xPl-El-OpA"/>
+                        <segue destination="iSj-gt-oNs" kind="relationship" relationship="rootViewController" id="8CI-IJ-3sd"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xKo-pE-4Kh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Gb-YU-QUI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3127" y="13"/>
+            <point key="canvasLocation" x="3252" y="47"/>
         </scene>
     </scenes>
     <resources>
@@ -367,6 +368,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="euB-18-HbA"/>
-        <segue reference="jx5-ES-mgm"/>
+        <segue reference="y6v-b2-knj"/>
     </inferredMetricsTieBreakers>
 </document>
