@@ -72,7 +72,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3430900A1F3481680002A458 /* New Group */ = {
+		3430900A1F3481680002A458 /* FoodStuff */ = {
 			isa = PBXGroup;
 			children = (
 				343347F51F294B51008148A6 /* MealTableViewController.swift */,
@@ -81,15 +81,15 @@
 				343347F11F292E47008148A6 /* Meal.swift */,
 				343EEA7E1F27916200BD2603 /* RatingControl.swift */,
 			);
-			name = "New Group";
+			name = FoodStuff;
 			path = FoodTracker;
 			sourceTree = "<group>";
 		};
 		34A26C231F22407A00B74DF0 = {
 			isa = PBXGroup;
 			children = (
-				3430900A1F3481680002A458 /* New Group */,
-				34A26C2E1F22407A00B74DF0 /* FoodTracker */,
+				3430900A1F3481680002A458 /* FoodStuff */,
+				34A26C2E1F22407A00B74DF0 /* RunTracker */,
 				34A26C431F22407A00B74DF0 /* FoodTrackerTests */,
 				34A26C2D1F22407A00B74DF0 /* Products */,
 			);
@@ -104,7 +104,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		34A26C2E1F22407A00B74DF0 /* FoodTracker */ = {
+		34A26C2E1F22407A00B74DF0 /* RunTracker */ = {
 			isa = PBXGroup;
 			children = (
 				34A26C2F1F22407A00B74DF0 /* AppDelegate.swift */,
@@ -117,6 +117,7 @@
 				34A26C381F22407A00B74DF0 /* LaunchScreen.storyboard */,
 				34A26C3B1F22407A00B74DF0 /* Info.plist */,
 			);
+			name = RunTracker;
 			path = FoodTracker;
 			sourceTree = "<group>";
 		};

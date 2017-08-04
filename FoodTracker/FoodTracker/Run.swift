@@ -62,12 +62,18 @@ class Run: NSObject, NSCoding{
         }
         // Because photo is an optional property of Meal, just use conditional cast.
         
-        let day = aDecoder.decodeObject(forKey: PropertyKey.day) as? String
-        let time = aDecoder.decodeObject(forKey: PropertyKey.time) as? String
-        let location = aDecoder.decodeObject(forKey: PropertyKey.location) as? String
+        guard let day = aDecoder.decodeObject(forKey: PropertyKey.day) as? String else {
+            return nil
+        }
+        guard let time = aDecoder.decodeObject(forKey: PropertyKey.time) as? String else {
+            return nil
+        }
+        guard let location = aDecoder.decodeObject(forKey: PropertyKey.location) as? String else {
+            return nil
+        }
         // Must call designated initializer.
-        //self.init(name: name, day: day, time: time, location: location)
-        self.init(name: "a", day: "b", time: "c", location: "d")
+        self.init(name: name, day: day, time: time, location: location)
+        //self.init(name: "a", day: "b", time: "c", location: "d")
 
     }
 }
