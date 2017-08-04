@@ -16,7 +16,7 @@ class RunTableViewController: UITableViewController {
         navigationItem.leftBarButtonItem = editButtonItem
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        loadSampleRuns()
         if let savedRuns = loadRuns() {
             runs += savedRuns
         }
@@ -145,8 +145,46 @@ class RunTableViewController: UITableViewController {
             print("Failed to save runs...")
         }
     }
-    private func loadSampleRuns() {
-        //TO DO: Load in JSON
+    private func loadSampleRuns(){
+        let url = URL(string: "https://reidsherman.com/runs.json")
+        URLSession.shared.dataTask(with:url!, completionHandler:
+            {(data, response, error) in
+                guard let data = data, error == nil else { return }
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String:Any]
+                    if let runs_load = json["runs"] as? [[String: AnyObject]] {
+                        for run in runs_load {
+                            
+                            let r_name = self.loadJSONString(jsonObject: run, name: "runName")
+                            //Make sure that the run name is not already loaded
+                            if !self.checkForRunName(name: r_name) {
+                                let r_day = self.loadJSONString(jsonObject: run, name: "runDay")
+                                let r_time = self.loadJSONString(jsonObject: run, name: "runTime")
+                                let r_location = self.loadJSONString(jsonObject: run, name: "runLocation")
+                                guard let current_run = Run(name:r_name, day: r_day, time: r_time, location: r_location) else {
+                                    fatalError("Unable to instantiate run")
+                                }
+                                self.runs += [current_run]
+                                self.tableView.reloadData()
+                            }
+                        }
+                    }
+                } catch let error as NSError {
+                    print(error)
+                }
+        }).resume()
+    }
+    
+    private func loadJSONString(jsonObject: [String:AnyObject], name: String) -> String {
+        return(jsonObject[name] as? String! ?? "EMPTY")
+    }
+    private func checkForRunName(name: String) -> Bool {
+        for run in runs {
+            if run.name == name {
+                return true
+            }
+        }
+        return false
     }
     private func loadRuns() -> [Run]? {
         return NSKeyedUnarchiver.unarchiveObject(withFile: Run.ArchiveURL.path) as? [Run]
