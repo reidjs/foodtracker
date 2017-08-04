@@ -72,9 +72,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3430900A1F3481680002A458 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				343347F51F294B51008148A6 /* MealTableViewController.swift */,
+				34A26C311F22407A00B74DF0 /* MealViewController.swift */,
+				343347F31F29362A008148A6 /* MealTableViewCell.swift */,
+				343347F11F292E47008148A6 /* Meal.swift */,
+				343EEA7E1F27916200BD2603 /* RatingControl.swift */,
+			);
+			name = "New Group";
+			path = FoodTracker;
+			sourceTree = "<group>";
+		};
 		34A26C231F22407A00B74DF0 = {
 			isa = PBXGroup;
 			children = (
+				3430900A1F3481680002A458 /* New Group */,
 				34A26C2E1F22407A00B74DF0 /* FoodTracker */,
 				34A26C431F22407A00B74DF0 /* FoodTrackerTests */,
 				34A26C2D1F22407A00B74DF0 /* Products */,
@@ -94,15 +108,10 @@
 			isa = PBXGroup;
 			children = (
 				34A26C2F1F22407A00B74DF0 /* AppDelegate.swift */,
-				343347F51F294B51008148A6 /* MealTableViewController.swift */,
 				343090051F306D920002A458 /* RunTableViewController.swift */,
-				34A26C311F22407A00B74DF0 /* MealViewController.swift */,
 				343090071F3079A80002A458 /* RunViewController.swift */,
-				343347F31F29362A008148A6 /* MealTableViewCell.swift */,
-				343347F11F292E47008148A6 /* Meal.swift */,
 				343090031F306ABE0002A458 /* RunTableViewCell.swift */,
 				348647221F3000690089D06D /* Run.swift */,
-				343EEA7E1F27916200BD2603 /* RatingControl.swift */,
 				34A26C331F22407A00B74DF0 /* Main.storyboard */,
 				34A26C361F22407A00B74DF0 /* Assets.xcassets */,
 				34A26C381F22407A00B74DF0 /* LaunchScreen.storyboard */,
