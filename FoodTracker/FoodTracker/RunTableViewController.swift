@@ -55,7 +55,8 @@ class RunTableViewController: UITableViewController {
         cell.dayLabel.text = run.day
         cell.locationLabel.text = run.location
         cell.timeLabel.text = run.time
-
+        cell.starButton.tag = 0
+        //cell.starButton.addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: <#T##UIControlEvents#>)
         return cell
     }
     

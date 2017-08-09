@@ -14,6 +14,7 @@ class RunTableViewCell: UITableViewCell {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var starButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
